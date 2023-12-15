@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khand" />
+    <script src="https://kit.fontawesome.com/83619e9da4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/car.css" />
+      <link rel="shotcut icon" href="../media/logo-pestaña.png">
+    <script src="https://kit.fontawesome.com/60be6c00de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Carrito</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title-container">
+                <a href="../index.html">
+                    <h1>LotoCare</h1>
+                </a>
+            </div>
+            <div class="logo-container">
+                <a href="../index.html"><img src="../media/logo-g.png" alt="Logo de Lotus Care" class="logo"></a>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="./day-care.html">Productos de día</a></li>
+                    <li><a href="./night-care.html">Productos de noche</a></li>
+                    <li><a href="./about-us.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="icons-container">
+                <i class="fa-solid fa-magnifying-glass icons"></i>
+                <a href="./login.html"><i class="fas fa-user icons"></i></a>
+                <a href="./car.html"> <i class="fa-solid fa-cart-shopping icons"></i></a>
+            </div>
+            <div class="show">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hidden-container">
+                <ul class="hidden-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./day-care.html">Para el día</a></li>
+                    <li><a href="./night-care.html">Para la noche</a></li>
+                    <li><a href="#">Tu carro de compra</a></li>
+                    <li><a href="./login.html">Inicia sesión</a></li>
+                    <li><a href="./singup-form.html">Regístrate</a></li>
+                    <li><a href="../html/about-us.html#contact-input">Contacto</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="section-carrito">
+            <p>Carrito</p>
+            <i class="fa-solid fa-cart-shopping" style="color: #006d77;"></i>
+        </div>
+        <section class="section-productos">
+            <article class="article-productos">
+                <aside class="limpiador-dia">
+                    <div class="img-limpiador-dia">
+                        <img src="../media/limpiador-noche.png" alt="limpiador de día" class="img-product-1" />
+                    </div>
+                    <div class="texto-limpiador-dia">
+                        <p id="texto-h1-limpiador-dia">Limpiador de día <span
+                                id="span-precio-limpiador-dia">7.95€</span></p>
+                        <p id="texto-p-limpiador-dia">Nuestro limpiador facial para el día se caracteriza por su
+                            suavidad con la piel, sin
+                            deslipidificar en exceso la piel. su combinación ideal de aceites esenciales y extractos de
+                            plantas...</p>
+                        <div class="btn-cantidad-producto-dia">
+                            <p>&lt; 1 &gt;</p>
+                        </div>
+                    </div>
+                    <div class="i-limpiador-dia">
+                        <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                </aside>
+                <aside class="limpiador-noche">
+                    <div class="img-limpiador-noche">
+                        <img src="../media/crema-noche.png" alt="crema de noche" class="img-product-2" />
+                    </div>
+                    <div class="texto-limpiador-noche">
+                        <p id="texto-h1-limpiador-noche">Crema de noche <span
+                                id="span-precio-limpiador-noche">6,75€</span></p>
+                        <p id="texto-p-limpiador-noche">La joya de la corona: nuestra crema nutritiva tecnológicamente
+                            más avanzada nutre
+                            profundamente la piel para ayudar a minimizar la aparición de líneas finas y arrugas...</p>
+                        <div class="btn-cantidad-producto-noche">
+                            <p>&lt; 1 &gt;</p>
+                        </div>
+                    </div>
+                    <div class="i-limpiador-dia">
+                        <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                </aside>
+                <aside>
+                    <form action="" method="post" class="form-codigo-promocional">
+                        <input type="text" placeholder="Código promocional" id="input-codigo-promocional" />
+                        <input type="submit" value="Añadir código" class="input-btn-codigo-promocional" />
+                    </form>
+                </aside>
+            </article>
+            <hr id="hr-divisor" />
+
+            <article class="article-total-a-pagar">
+                <section id="section-total-a-pagar">
+                    <h2 id="total-a-pagar-h2">Total a pagar</h2>
+                    <p class="total-a-pagar-p">Limpiador de día <span class="total-a-pagar-precio">7,95</span></p>
+                    <p class="total-a-pagar-p">Crema de noche <span class="total-a-pagar-precio">6,75</span></p>
+                    <p class="total-a-pagar-p" id="total-pagar-transporte">Transporte <span
+                            class="total-a-pagar-precio">2,00</span></p>
+                    <p class="total-a-pagar-p">Total a pagar <span class="total-a-pagar-precio">16,70</span></p>
+                </section>
+            </article>
+
+
+        </section>
+        <hr id="hr-divisor-2" />
+        <section class="section-payment-method">
+            <article>
+                <form action="" class="form-payment-method">
+                    <div>
+                        <input type="radio" id="radio-btn1" name="grupo">
+                        <label class="pago-con-tarjeta">Pago con tarjeta</label>
+                        <figure>
+                            <img src="../media/metodos-pago.png" alt="" id="img-payment-methods">
+                        </figure>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio-btn2" name="grupo">
+                        <label>Paypal</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="radio-btn3" name="grupo">
+                        <label>Transferencia Bancaria</label>
+                    </div>
+                    <input type="submit" value="Pagar" class="input-btn-codigo-promocional" id="input-payment-method" />
+
+                    </ul>
+                </form>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="left-div">
+            <h2>Contáctanos!</h2>
+            <h3>¿Lista para empezar?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida felis auctor, ultrices nunc id,
+                aliquet nunc. Sed euismod, nisl a lacinia hendrerit, justo velit aliquam nunc, vitae ultricies velit ex
+                in justo.</p>
+        </div>
+        <div class="right-div">
+            <div class="input-container">
+                <label for="email">Manténgase en contacto para ofertas, noticias y mucho más</label>
+                <input type="email" id="email" placeholder="    Ingrese su correo electrónico">
+                <button type="submit">Enviar</button>
+            </div>
+            <div class="social-media-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- SCRIPT PARA BOTON HAMBURGUESA -->
+    <script>
+        $(document).ready(function() {
+            $(".show").on("click", function(event) {
+                $(".hidden-list").toggle();
+                event.stopPropagation(); // Evita que el clic se propague al documento
+            });
+        
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest('.show').length && !$(event.target).hasClass('hidden-list')) {
+                $(".hidden-list").hide();
+            }
+        });
+        });
+        
+    </script>    
+    <!-- FINAL SCRIPT PARA BOTON HAMBURGUESA -->
+</body>
+
+</html>

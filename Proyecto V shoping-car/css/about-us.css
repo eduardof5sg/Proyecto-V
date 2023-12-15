@@ -1,0 +1,398 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Khand', sans-serif;
+    font-size: 4;
+}
+
+body {
+    /* Evitar desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    background: #006d77;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    /* Centra horizontalmente el contenido */
+    justify-content: space-between;
+    position: relative;
+    height: 8.2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Espaciado interno entre elementos */
+}
+
+nav a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: #fff;
+    /* Color del texto de los enlaces */
+    font-size: 1.7rem;
+    /* Tamaño fuente */
+    font-weight: bolder;
+    /*Grosor de la fuente (Negrita, etc)*/
+}
+
+ul {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Espacio entre elementos de la lista */
+    flex: 6;
+    /* Toma la parte central del espacio disponible */
+    align-items: center;
+    /* Alinea verticalmente los elementos de texto con el contenido del primer li (imagen) */
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    flex: 3;
+    /* Toma la primera parte del espacio disponible */
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+.logo {
+    width: 6rem;
+    /* Ajusta el tamaño del logotipo según tus necesidades */
+    height: auto;
+    color: white;
+    font-size: 5rem;
+}
+
+i {
+    color: white;
+    z-index: 2;
+}
+
+.icons-container {
+    flex: 3;
+    /* Toma la tercera parte del espacio disponible */
+    text-align: center;
+    /* Alinea los íconos a la derecha */
+}
+
+.show {
+    display: none;
+}
+
+.icons {
+    font-size: 1.6rem;
+    margin-left: 30px;
+}
+
+/*Cierre de Header*/
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+.container div{
+    background: lightblue ;
+    border: solid deeppink 3px;   
+    
+}
+.container section{
+    border:solid blue 4px;
+} 
+*/
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.seccion2 {
+    display: flex;
+}
+
+.imagen {
+    display: block;
+    width: 100%;
+}
+
+.img1 {
+    width: 100%;
+}
+
+.texto1 {
+    width: 580px;
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 60px;
+}
+
+h2 {
+    width: 291px;
+    flex-shrink: 0;
+    font-size: 50px;
+    font-style: normal;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.texto2 {
+    width: 400px;
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.imagen2 {
+    margin-left: 80px;
+    margin-right: 0px;
+    float: right;
+}
+
+.texto3 {
+    width: 400px;
+    flex-shrink: 0;
+    font-size: 22px;
+    margin-left: 60px;
+    margin-top: -100px;
+
+
+}
+
+.imagen3 {
+    margin-left: -250px;
+    padding: 150px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+/* ----------------- ESTILOS MENU HAMBURGUESA ----------------- */
+.hidden-container {
+    position: relative;
+}
+
+.hidden-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 109, 119, 0.9); /* Fondo semi-transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+}
+
+.hidden-list li {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente en un 50% */
+    font-weight: bold; /* Aumenta el grosor de la fuente */
+    position: relative;
+    color: #fff; /* Color del texto */
+}
+
+.hidden-list li:hover {
+    background: linear-gradient(to bottom, rgba(226, 149, 120, 0.9), rgba(226, 149, 120, 0.6));
+}
+
+.hidden-list li::before,
+.hidden-list li::after {
+    content: "";
+    position: absolute;
+    height: 5px; /* Grosor de las líneas de sombra */
+    background-color: rgba(226, 149, 120, 0.5); /* Color semi-transparente basado en #e29578 para las sombras chulas */
+    width: calc(100% + 40px); /* Ancho ajustado para extenderse más allá del contenido del li */
+    left: -20px; /* Desplaza a la izquierda la mitad del ancho adicional */
+}
+
+.hidden-list li::before {
+    top: 0;
+}
+
+.hidden-list li::after {
+    bottom: 0;
+}
+
+.show:hover {
+    cursor: pointer;
+    background-color: #83C5BE;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* ----------------- FINAL ESTILOS MENU HAMBURGUESA ----------------- */
+
+
+/* ----------------- FOOTER ----------------- */
+footer {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: #006D77;
+}
+
+.left-div {
+    width: 40%;
+    font-size: large;
+    color: #fff;
+    padding: 50px;
+}
+
+.right-div {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 50px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 80%;
+
+    height: 37px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.social-media-icons {
+    font-size: 3em;
+    margin-left: 60%;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width:1023px) {
+    header {
+        width: auto;
+    }
+
+    /* Header */
+    .show {
+        display: block;
+        font-size: xx-large;
+    }
+
+    .icons-container {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section p {
+        width: 100%;
+    }
+
+    .texto1 {
+        width: 70%;
+        padding: 35px;
+    }
+
+    .texto2 {
+        width: 70%;
+        padding: 35px;
+
+    }
+
+    .texto3 {
+        width: 70%;
+        padding: 60px;
+        margin-top: 5px;
+    }
+
+    .imagen {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .logo-container {
+        position: absolute;
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+
+    /*FOOTER*/
+    .social-media-icons {
+        font-size: 2em;
+        margin-left: 0px;
+        margin-bottom: 30px;
+        display: flex;
+    }
+    .left-div p {
+        font-size: 1rem;
+    }
+}
+
+/* 
+  @media only screen and (max-width: 767px) {
+   
+    .show {
+        display: block;
+        font-size: xx-large;
+        }
+    
+        .icons-container {
+        display: none;
+        }
+
+    main{
+        
+    }
+  
+  } */

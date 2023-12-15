@@ -1,0 +1,669 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Khand', sans-serif;
+    font-size: 4;
+}
+
+body {
+    /* Evitar desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+header {
+    background: #006D77;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    /* Centra horizontalmente el contenido */
+    justify-content: space-between;
+    position: relative;
+    height: 7rem
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* Espaciado interno entre elementos */
+
+}
+
+nav a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: #fff;
+    /* Color del texto de los enlaces */
+    font-size: 1.4rem;
+    /* TamaÃ±o fuente */
+    font-weight: bold;
+    /*Grosor de la fuente (Negrita, etc)*/
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Espacio entre elementos de la lista */
+    flex: 1;
+    /* Toma la parte central del espacio disponible */
+    align-items: center;
+    /* Alinea verticalmente los elementos de texto con el contenido del primer li (imagen) */
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    flex: 1;
+    /* Toma la primera parte del espacio disponible */
+}
+
+h1 {
+    font-size: 3.2rem;
+
+}
+
+.logo {
+    width: 6rem;
+    /* Ajusta el tamagno del logotipo segÃºn tus necesidades */
+    height: auto;
+    color: white;
+    font-size: 5rem;
+}
+.show {
+    display: none;
+  }
+
+i {
+    color: white;
+    z-index: 2;
+}
+
+.icons-container {
+    flex: 1;
+    /* Toma la tercera parte del espacio disponible */
+    text-align: center;
+    /* Alinea los i­conos a la derecha */
+}
+
+.icons {
+    font-size: 1.6rem;
+    margin-left: 30px;
+}
+
+.container {
+    background-color: #EDF6F9;
+    width: 100%;
+    height: 550vh;
+    text-align: right;
+    position: relative;
+}
+
+.first-section {
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+}
+
+.side-title-container {
+    background: #E29578;
+}
+
+.first-text-container {
+    background: #E29578;
+    /* Centra horizontalmente */
+    flex: 0.5;
+}
+
+/* .first-text-container i{
+    font-size:500%;
+    margin-top: 40%;
+    margin-right: 40%;
+} */
+
+.video-container {
+    max-width: 320px;
+    transition: max-width 1s, padding 1s, margin 1s;
+    background: #E29578;
+    padding: 0px;
+    /* Cambia el color para resaltar el area */
+    flex: 2;
+}
+
+.video-container img {
+    width: 500px;
+    height: 600px;
+}
+
+/* FULLSCREEN clase agnadida POSTERIORMENTE por medio de JS */
+.video-container.fullscreen {
+    padding: 0;
+    margin: 0;
+    background: #E29578;
+    max-width: 60em;
+    height: 30em;
+    /* TamaÃ±o del video al hacer clic en Ã©l (el doble del tamaÃ±o inicial) */
+    cursor: pointer;
+    transition: max-width 1s, padding 1s, margin 1s;
+    /* Agregamos transiciones para max-width, padding y margin */
+}
+
+video {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+video.play-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.video-image {
+    color: #E29578;
+
+}
+
+/*---------------------- Estilos texto derecha --------------------------- */
+.right-text-container {
+    /* Cambia el color para resaltar el Ã¡rea */
+    background: rgba(131, 197, 190, 0.1);
+    display: flex;
+    flex-direction: column;
+    /* Apila elementos verticalmente */
+    text-align: right;
+    flex: 0.5;
+    justify-content: space-between;
+    /* Espacio vertical distribuido entre elementos */
+    align-items: center;
+}
+
+.right-text-container.fullscreen {
+    text-align: right;
+}
+
+.right-text {
+    background: #E29578;
+    padding: 8px;
+    font-size: 3em;
+    /* Cambia el color para resaltar el Ã¡rea */
+}
+
+.logo-animation {
+    display: none;
+    width: 150px;
+    background: #006D77;
+    border-radius: 50% 0% 0% 50%;
+    margin: auto 0px auto;
+    align-self: flex-end;
+    /* Alinea la imagen en el centro vertical */
+    /* Alinea la imagen a la derecha */
+    transition: transform 0.7s ease-in-out;
+    /* Agrega una transiciÃ³n de salida para la propiedad 'transform' */
+    transform: translateX(100%);
+    /* Inicialmente, la imagen estÃ¡ fuera de la vista (derecha) */
+}
+
+/* Estilo para mostrar la imagen */
+.logo-animation.show {
+    transform: translateX(0);
+    /* La imagen se desplaza desde la derecha hacia su posiciÃ³n original */
+
+}
+
+.lines-container {
+    position: absolute;
+    margin-top: 40px;
+    right: 0;
+    transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 80%;
+}
+
+.horizontal-line {
+    display: block;
+    /* Hace que las lÃ­neas aparezcan en lÃ­nea horizontal */
+    height: 7px;
+    /* Altura de las lÃ­neas horizontales */
+    background-color: black;
+    /* Color de las lÃ­neas (puedes ajustarlo segÃºn tus preferencias) */
+    margin-bottom: 16px;
+    /* Espacio entre las lÃ­neas */
+    border-top-right-radius: 10px;
+    /* Redondea el borde superior derecho */
+    border-bottom-right-radius: 10px;
+    /* Redondea el borde inferior derecho */
+    transform-origin: left;
+    /* Establece el origen de transformaciÃ³n a la izquierda */
+    transform: scaleX(0);
+    /* Inicialmente, las lÃ­neas estÃ¡n completamente ocultas */
+    transition: transform 2s ease-in-out;
+    /* Agrega una transiciÃ³n para la transformaciÃ³n */
+
+}
+
+
+.animate-lines .horizontal-line {
+    transform: scaleX(1);
+    /* Muestra completamente las lÃ­neas */
+}
+
+.line1 {
+    background: #E29578;
+    margin-top: 16px;
+    width: 1052px;
+    /* Longitud de la primera lÃ­nea */
+}
+
+.line2 {
+    background: #006D77;
+    width: 984px;
+    /* Longitud de la segunda lÃ­nea */
+}
+
+.line3 {
+    background: #E29578;
+    width: 795px;
+    /* Longitud de la tercera lÃ­nea */
+}
+
+/* ------------------ Estilos Slider (FIST SECTION) ------------------- */
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.slide-container {
+    width: 300px;
+    background-color: #83C5BE;
+    box-shadow: 2px 2px 30 px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 200px 25px;
+}
+
+.slide-img {
+    height: 450px;
+    position: relative;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: #E29578;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.type a {
+    color: #222222;
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+
+}
+
+.type span {
+    text-align: left;
+    color: rgba(26, 26, 26, 0.5);
+}
+
+.price {
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+
+}
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 95, 236, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.buy-btn {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+    color: #FFFFFF;
+    background-color: #f15fa3;
+    transition: all ease 0.3s;
+}
+
+
+.slide-img:hover .overlay {
+    visibility: visible;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* ------------------------ SECOND SECTION (primer hover)-------------------- */
+/* Estilos de la imagen alineada a la derecha */
+.second-section {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hover-content {
+    position: relative;
+}
+
+.hover-image {
+    width: 40em;
+    height: auto;
+    transition: transform 0.3s;
+    z-index: 2;
+}
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(226, 149, 120, 0.7);
+    color: #fff;
+    font-size: 2.2em;
+    text-align: right;
+    justify-content: flex-end;
+    transition: left 0.3s;
+    z-index: 0;
+}
+
+.image-container:hover .hover-image {
+    transform: translateX(-100%);
+}
+
+.image-container:hover .hover-text {
+    left: 0;
+}
+
+/* ------------------------ THIRD SECTION (segundo hover)-------------------- */
+/* Estilos de la imagen alineada a la izquierda */
+.third-section {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.left-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-hover-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.left-hover-image {
+    width: 40em;
+    height: auto;
+    padding: 50px;
+    transition: transform 0.3s;
+}
+
+.left-hover-text {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(131, 197, 190, 0.7);
+    /* Utiliza los valores RGB de #83C5BE y establece la opacidad */
+    color: #fff;
+    /* Color del texto, puedes ajustarlo según tus necesidades */
+    flex-direction: column;
+    text-align: left;
+    font-size: 2.2em;
+    transition: right 0.3s;
+}
+
+.left-description-title {
+    display: block;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.left-description {
+    display: block;
+    margin-left: 30px;
+
+}
+
+.left-image-container:hover .left-hover-image {
+    transform: translateX(100%);
+}
+
+.left-image-container:hover .left-hover-text {
+    right: 0;
+}
+
+
+/* ----------------- ESTILOS MENU HAMBURGUESA ----------------- */
+.hidden-container {
+    position: relative;
+}
+
+.hidden-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 109, 119, 0.9); /* Fondo semi-transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+}
+
+.hidden-list li {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente en un 50% */
+    font-weight: bold; /* Aumenta el grosor de la fuente */
+    position: relative;
+    color: #fff; /* Color del texto */
+}
+
+.hidden-list li:hover {
+    background: linear-gradient(to bottom, rgba(226, 149, 120, 0.9), rgba(226, 149, 120, 0.6));
+}
+
+.hidden-list li::before,
+.hidden-list li::after {
+    content: "";
+    position: absolute;
+    height: 5px; /* Grosor de las líneas de sombra */
+    background-color: rgba(226, 149, 120, 0.5); /* Color semi-transparente basado en #e29578 para las sombras chulas */
+    width: calc(100% + 40px); /* Ancho ajustado para extenderse más allá del contenido del li */
+    left: -20px; /* Desplaza a la izquierda la mitad del ancho adicional */
+}
+
+.hidden-list li::before {
+    top: 0;
+}
+
+.hidden-list li::after {
+    bottom: 0;
+}
+
+.show:hover {
+    cursor: pointer;
+    background-color: #83C5BE;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* ----------------- FINAL ESTILOS MENU HAMBURGUESA ----------------- */
+
+
+
+/* ----------------- FOOTER ----------------- */
+
+
+footer {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: #006D77;
+}
+
+.left-div {
+    width: 40%;
+    font-size: large;
+    color: #fff;
+    padding: 50px;
+}
+
+.right-div {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-container {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 50px;
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 80%;
+    height: 37px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.social-media-icons {
+    font-size: 3em;
+    margin-left: 60%;
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    /*HEADER*/
+    header {
+      width: auto;
+    }
+  
+    .show {
+      display: block !important;
+      font-size: xx-large;
+    }
+  
+    .icons-container {
+      display: none;
+    }
+  
+    ul {
+      display: none;
+    }
+  
+    .logo-container {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 50px;
+    }
+      /*FOOTER*/
+  .social-media-icons {
+    font-size: 2em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .left-div p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shotcut icon" href="../media/logo-pestaña.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khand" />
+    <title>Forulario-Registro</title>
+    <script src="https://kit.fontawesome.com/60be6c00de.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Ecommerce Skin Care</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="title-container">
+                <a href="../index.html">
+                    <h1>LotoCare</h1>
+                </a>
+            </div>
+            <div class="logo-container">
+                <a href="../index.html"><img src="../media/logo-g.png" alt="Logo de Lotus Care" class="logo"></a>
+            </div>
+            <div>
+                <ul  id="menu-list">
+                    <li><a href="./day-care.html">Productos de día</a></li>
+                    <li><a href="./night-care.html">Productos de noche</a></li>
+                    <li><a href="./about-us.html">Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="icons-container">
+                <i class="fa-solid fa-magnifying-glass icons"></i>
+                <a href="./login.html"><i class="fas fa-user icons"></i></a>
+                <a href="./html/car.html"> <i class="fa-solid fa-cart-shopping icons"></i></a>
+            </div>
+            <div class="show">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="hidden-container">
+                <ul class="hidden-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./day-care.html">Para el día</a></li>
+                    <li><a href="./night-care.html">Para la noche</a></li>
+                    <li><a href="./car.html">Tu carro de compra</a></li>
+                    <!-- <li><a href="#">Inicia sesión</a></li> -->
+                    <li><a href="./singup-form.html">Regístrate</a></li>
+                    <li><a href="./about-us.html">Nosotros</a></li>
+                    <li><a href="../html/about-us.html#contact-input">Contacto</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="form-container">
+            <form class="form-group">
+                <h2 class="form-title">Formulario Inicio Sesión</h2>
+                <div class="form-subgroup">
+                    <label>Correo electrónico</label>
+                    <input type="email" name="correo" id="correo" placeholder="introduce tu correo electrónico" required="required">
+                    <span class="form-line"></span>
+                    <label>Contraseña</label>
+                    <input type="password" name="correo" id="contraseña" placeholder="introduce tu contraseña" required="required">
+                    <span class="form-line"></span>
+                </div>
+                <input type="checkbox">
+                <label class="terminos">Estoy de acuerdo con <a href="#">Términos y condiciones</a></label>
+                
+                <div class="cuenta">
+                <p class="form-paragraph"><a href="../html/singup-form.html" class="form-link">¿No tienes cuenta?</a></p>
+                <input type="submit" class="form-submit" value="Continuar">
+            </div>
+            </form>
+
+            
+
+        </section>
+
+
+
+    </main>
+    <footer>
+        <div class="left-div">
+            <h2>Contáctanos!</h2>
+            <h3>¿Lista para empezar?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida felis auctor, ultrices nunc id,
+                aliquet nunc. Sed euismod, nisl a lacinia hendrerit, justo velit aliquam nunc, vitae ultricies velit ex
+                in justo.</p>
+        </div>
+        <div class="right-div">
+            <div class="input-container">
+                <label for="email">Manténgase en contacto para ofertas, noticias y mucho más</label>
+                <input type="email" id="contact-input" placeholder="    Ingrese su correo electrónico">
+                <button type="submit">Enviar</button>
+            </div>
+            <div class="social-media-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+      <!-- SCRIPT PARA BOTON HAMBURGUESA -->
+      <script>
+        $(document).ready(function() {
+            $(".show").on("click", function(event) {
+                $(".hidden-list").toggle();
+                event.stopPropagation(); // Evita que el clic se propague al documento
+            });
+        
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest('.show').length && !$(event.target).hasClass('hidden-list')) {
+                $(".hidden-list").hide();
+            }
+        });
+        });
+        
+    </script>    
+    <!-- FINAL SCRIPT PARA BOTON HAMBURGUESA -->
+</body>
+
+</html>
