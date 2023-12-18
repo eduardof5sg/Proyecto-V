@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const correo1Valor= correo1.value.trim();               
         const passUnoValor= passUno.value.trim();
         const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-       
+        
 
         if(!correo1Valor) {
             validaFallo(correo1, 'introduce un Email')
@@ -47,7 +47,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
         }else {
             validaOk(passUno, 'el usuario no existe')
         }      
-        
+        if (correoValido.test(correo1Valor) && passUnoValor) {
+            window.location.href = 'http://127.0.0.1:3000/index.html';
+        }
+
+             
 
      }
     
